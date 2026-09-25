@@ -3,27 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SANDBOX // COMMAND TERMINAL</title>
+  <title>SANDBOX // PERSONNEL FILE</title>
   <link rel="icon" type="image/x-icon" href="Nuclear_symbol_svg.webp">
   <link rel="stylesheet" href="style.css">
 </head>
 <body onload="startTime()">
 
   <header class="hud-bar">
-    <span class="callsign">SANDBOX-01</span>
+    <span class="callsign">SANDBOX</span>
     <button id="modeToggle" class="btn-small" onclick="toggleMode()">NIGHT MODE</button>
   </header>
 
   <main class="console">
 
+    <section class="me">
+      <div class="me-photo" aria-hidden="true">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="none" stroke="var(--line)" stroke-width="2"/>
+          <circle cx="50" cy="38" r="16" fill="var(--khaki)"/>
+          <path d="M20 88 C20 62 80 62 80 88 Z" fill="var(--khaki)"/>
+        </svg>
+      </div>
+      <div class="me-text">
+        <h1 class="me-name">YOUR NAME</h1>
+        <p class="me-role">Rank / Title — e.g. Web Developer, Student, Designer</p>
+        <p class="me-tagline">One line about who you are and what you do.</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel-title">// ABOUT</h2>
+      <p class="body-text">
+        Write two or three sentences about yourself here — your background, what you're
+        studying or working on, and what you're looking for (internships, freelance work,
+        collaborators, etc.).
+      </p>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel-title">// SKILLS</h2>
+      <ul class="tag-list">
+        <li class="tag">HTML</li>
+        <li class="tag">CSS</li>
+        <li class="tag">JavaScript</li>
+        <li class="tag">Skill 4</li>
+        <li class="tag">Skill 5</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel-title">// PORTFOLIO</h2>
+      <p class="panel-sub">Replace these with your own projects</p>
+      <div class="portfolio-grid">
+
+        <article class="project-card">
+          <h3 class="project-title">Project One</h3>
+          <p class="project-desc">Short description of what this project is and what you built.</p>
+          <a class="project-link" href="#" onclick="return false;">View project →</a>
+        </article>
+
+        <article class="project-card">
+          <h3 class="project-title">Project Two</h3>
+          <p class="project-desc">Short description of what this project is and what you built.</p>
+          <a class="project-link" href="#" onclick="return false;">View project →</a>
+        </article>
+
+        <article class="project-card">
+          <h3 class="project-title">Project Three</h3>
+          <p class="project-desc">Short description of what this project is and what you built.</p>
+          <a class="project-link" href="#" onclick="return false;">View project →</a>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel-title">// CONTACT</h2>
+      <div class="links">
+        <a href="mailto:you@example.com">email</a>
+        <a href="#" onclick="return false;">github</a>
+        <a href="#" onclick="return false;">linkedin</a>
+      </div>
+    </section>
+
+    <!-- ============ SYSTEM PANEL (required JS features) ============ -->
     <section class="panel">
       <h2 class="panel-title">// LOCAL TIME</h2>
       <p id="txt" class="readout"></p>
     </section>
 
     <section class="panel">
-      <h2 class="panel-title">// MISSION COUNTDOWN</h2>
-      <p class="panel-sub">T-minus to operation launch</p>
+      <h2 class="panel-title">// COUNTDOWN</h2>
+      <p class="panel-sub">Time until next milestone (edit the date in script.js)</p>
       <p id="demo" class="readout readout-small"></p>
     </section>
 

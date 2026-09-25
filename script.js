@@ -1,4 +1,3 @@
-
 function startTime() {
   const today = new Date();
   let h = today.getHours();
@@ -17,8 +16,7 @@ function pad(i) {
   return i < 10 ? "0" + i : i;
 }
 
-
-const countDownDate = new Date("Jan 1, 2027 00:00:00").getTime();
+const countDownDate = new Date("Jul 17, 2027 00:00:00").getTime();
 
 const countdownTimer = setInterval(function () {
   const now = new Date().getTime();
@@ -41,33 +39,30 @@ const countdownTimer = setInterval(function () {
   }
 }, 1000);
 
-
-function abortSequence() {
-  const msg = document.getElementById("abortMsg");
-  const btn = document.getElementById("abortBtn");
+function exitSequence() {
+  const msg = document.getElementById("exitMsg");
+  const btn = document.getElementById("exitBtn");
 
   btn.disabled = true;
   let secondsLeft = 3;
-  msg.innerHTML = "ABORT CONFIRMED — terminal will close in " + secondsLeft + "...";
+  msg.innerHTML = "exit CONFIRMED — page will close in " + secondsLeft + "...";
 
   const countdown = setInterval(function () {
     secondsLeft--;
     if (secondsLeft > 0) {
-      msg.innerHTML = "ABORT CONFIRMED — terminal will close in " + secondsLeft + "...";
+      msg.innerHTML = "exit CONFIRMED — page will close in " + secondsLeft + "...";
     } else {
       clearInterval(countdown);
-      msg.innerHTML = "TERMINAL CLOSING...";
-      // window.close() only works on tabs/windows opened by script;
-      // most browsers block it on a normal tab, so we show a fallback.
+      msg.innerHTML = "PAGE CLOSING...";
+
       window.close();
       setTimeout(function () {
-        msg.innerHTML = "TERMINAL CLOSING... (your browser blocked auto-close — you can close this tab manually)";
+        msg.innerHTML = "PAGE CLOSING... (your browser blocked auto-close — you can close this tab manually)";
         btn.disabled = false;
       }, 400);
     }
   }, 1000);
 }
-
 
 function toggleMode() {
   const isLight = document.body.classList.toggle("light-mode");

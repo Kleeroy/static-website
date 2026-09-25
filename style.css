@@ -154,7 +154,122 @@ h1, h2, .callsign {
   min-height: 1.2rem;
 }
 
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--warn);
+}
+
+.hero-photo {
+  flex: none;
+  width: 84px;
+  height: 84px;
+}
+
+.hero-name {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--ink);
+}
+
+.hero-role {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: var(--khaki);
+}
+
+.hero-tagline {
+  margin: 0.4rem 0 0;
+  font-size: 0.85rem;
+  color: var(--ink-dim);
+}
+
+.body-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.tag-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.tag {
+  border: 1px solid var(--line);
+  color: var(--khaki);
+  font-size: 0.78rem;
+  padding: 0.35rem 0.65rem;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  border: 1px solid var(--line);
+  background: rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+}
+
+body.light-mode .project-card {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.project-title {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  color: var(--ink);
+  font-family: 'Oswald', sans-serif;
+}
+
+.project-desc {
+  margin: 0 0 0.6rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--ink-dim);
+}
+
+.project-link {
+  font-size: 0.78rem;
+  color: var(--warn);
+  text-decoration: none;
+}
+
+.project-link:hover { text-decoration: underline; }
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.links a {
+  font-size: 0.8rem;
+  color: var(--ink);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  padding: 0.45rem 0.7rem;
+}
+
+.links a:hover {
+  border-color: var(--warn);
+  color: var(--warn);
+}
+
 @media (max-width: 480px) {
   .readout { font-size: 2rem; }
   .readout-small { font-size: 1.25rem; }
+  .hero { flex-direction: column; text-align: center; }
 }
