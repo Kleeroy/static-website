@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SANDBOX // COMMAND TERMINAL</title>
+  <link rel="icon" type="image/x-icon" href="Nuclear_symbol_svg.webp">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="startTime()">
+
+  <header class="hud-bar">
+    <span class="callsign">SANDBOX-01</span>
+    <button id="modeToggle" class="btn-small" onclick="toggleMode()">NIGHT MODE</button>
+  </header>
+
+  <main class="console">
+
+    <section class="panel">
+      <h2 class="panel-title">// LOCAL TIME</h2>
+      <p id="txt" class="readout"></p>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel-title">// MISSION COUNTDOWN</h2>
+      <p class="panel-sub">T-minus to operation launch</p>
+      <p id="demo" class="readout readout-small"></p>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel-title">// SYSTEM CONTROL</h2>
+      <button id="abortBtn" class="btn-danger" onclick="abortSequence()">ABORT MISSION</button>
+      <p id="abortMsg" class="alert-text"></p>
+    </section>
+
+  </main>
+
+  <footer class="hud-bar hud-bar-bottom">
+    <span>STATUS: <span class="status-ok">OPERATIONAL</span></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
